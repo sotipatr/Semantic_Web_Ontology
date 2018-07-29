@@ -1,0 +1,1129 @@
+<rdf:RDF
+    xmlns="http://www.owl-ontologies.com/5399_ask4.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:assert="http://www.owl-ontologies.com/assert.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://www.owl-ontologies.com/5399_ask4.owl/#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#" > 
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Patras_exhibition">
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">512</no_visitors>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261325489</telephone>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πολιτιστική εκδήλωση Πατρας</org_name>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mailer@upatras.gr</email>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Achaican_antic_car"/>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <collaborate_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_car_1"/>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Univercity of Patras</address>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_national>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_exhibits>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery">
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</no_visitors>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2103355567</telephone>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Dominikos_Paintings"/>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_national>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πινακοθήκη Αθηνών</org_name>
+    <collaborate_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mailer@apg.gr</email>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#no_exhibits"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:argument2 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:first rdf:nodeID="A6"/>
+    <rdf:rest rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Painting_of_a_landscape">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πίνακας τοπίου</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A1"/>
+    <rdf:rest rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <rdf:rest rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_Art_gallery">
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Furniture_exhibit"/>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_exhibits>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_national>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Jewel_exhibit"/>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3210</no_visitors>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Grafity_painting"/>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2107658412</telephone>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eθνική γκαλερί τέχνης</org_name>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#planet_documetary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Region"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#collaborate_with">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#collaborate_with"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#no_visitors"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:argument2 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#a"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Greece">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <has_cultural_carrier rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <has_capital rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Έλλαδα</area_name>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Crete"/>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_Picture_gallery_of_Athens_Middle_Ages_Section">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Picture_gallery_of_Athens"/>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mailer@npga.gr</email>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">654163153</telephone>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery"/>
+    <sub_gallery rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery"/>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μιχαλακοπούλου 1, Αθήνα 115 28</address>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μεσσαιωνικό τμήμα Εθνικής Πινακοθήκης Αθηνών</org_name>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</no_exhibits>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Picture_gallery"/>
+    <rdf:rest rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:first rdf:nodeID="A16"/>
+    <rdf:rest rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_national"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Patras">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Crete"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras_exhibition"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πάτρα</area_name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A23"/>
+    <rdf:rest rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Planet_systems_of_the_universe">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#planet_documetary"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planet_systems_of_the_universe</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#is_cultural_carrier_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#has_cultural_carrier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A25"/>
+    <rdf:rest rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int">900</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#planet_documetary"/>
+    <rdf:rest rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#email">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#communication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Antic_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A33"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:arguments rdf:nodeID="A37"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Antic_car_exhibition">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mailer@antqcars.gr</email>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Βενιζέλου 4</address>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πολιτιστική εκδήλωση αυτοκινήτων αντικες</org_name>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_national>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</no_visitors>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#mini_cooper"/>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Crete"/>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</no_exhibits>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A38"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:first rdf:nodeID="A40"/>
+    <rdf:rest rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Spain_picture_gallery">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spanish_Exhibition_Union"/>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Guernica"/>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</no_exhibits>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_visitors>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_national>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πινακοθηκη Ισπανίας</org_name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#is_region_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#includes"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_national"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#has"/>
+    <swrl:argument2 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#x"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Bronze_Art_exhibit">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μπρούτζινο εκθεμα τέχνης</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+    <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Paintings"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_exhibition"/>
+    <rdf:rest rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#org_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+    <rdf:rest rdf:nodeID="A45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_national"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#no_exhibits"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#no_visitors"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:argument2 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Spanish_Exhibition_Union">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ενωση πολιτιστικών εκδηλώσεων Ισπανίας</org_name>
+    <is_cultural_carrier_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#sub_gallery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#sub_org_of"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#has_capital">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#has_cultural_carrier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_cultural_carrier_of"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_exhibition"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Scarabeo">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <has_origin_from rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scarabeo</exh_title>
+    <is_associated_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Painting_of_a_girl"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Barcelona">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Region"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spain"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Madrit"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Βαρκελώνη</area_name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A51"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#communication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibition"/>
+    <rdf:rest rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A15"/>
+    <rdf:rest rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A58"/>
+    <rdf:rest rdf:nodeID="A56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+    <rdf:rest rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_located_in"/>
+    <owl:hasValue rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A61"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#exh_title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Mixed_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <owl:equivalentClass rdf:nodeID="A63"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_Area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="A65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Big_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <owl:equivalentClass rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A66"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibition"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Paintings"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#is_located_in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#has"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#owns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#belongs_to"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Small_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium_exhibition"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_national"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:nodeID="A73"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Spain">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <has_capital rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Madrit"/>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Barcelona"/>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Madrit"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ισπανία</area_name>
+    <has_cultural_carrier rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spanish_Exhibition_Union"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:nodeID="A28"/>
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <owl:equivalentClass rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrl:argument2>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#no_exhibits"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#mini_cooper">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Various_exhibit"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μινι κουπερ</exh_title>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_car_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#has_origin_from">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Acropolis_painting">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Η Ακρόπολη</exh_title>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery_1">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ολυμπία</org_name>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Painting_of_a_girl"/>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_national>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A47"/>
+    <rdf:rest rdf:nodeID="A76"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:arguments rdf:nodeID="A78"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+    <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+    <swrl:arguments rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Athens_National_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#sub_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#sub_org_of"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Paintings">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:first rdf:nodeID="A59"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#x"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Achaican_antic_car">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras_exhibition"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Αχαικό αυτοκίνητο αντίκα</exh_title>
+    <has_origin_from rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A75"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Great_Britain">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <has_cultural_carrier rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#British_Exhibition_union"/>
+    <includes rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#London"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μεγάλη Βρετανεία</area_name>
+    <has_capital rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#London"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_exhibition"/>
+    <rdf:rest rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Region">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_national"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#x"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Olympia">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Region"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery_1"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ολυμπία</area_name>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Crete"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:nodeID="A64"/>
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#v"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Jewel_exhibit">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Art_gallery"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Συλλεκτικό κόσμημα</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium">
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_visitors>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</no_exhibits>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πλανητάριο</org_name>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mailer@planet.gr</email>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planet_systems_of_the_universe"/>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_national>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ζωγράφου 3</address>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Sun_and_the_sea_documentary"/>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2101236547</telephone>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:first rdf:nodeID="A69"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#no_visitors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Crete">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Κρήτη</area_name>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_car_exhibition"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Various_exhibit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A34"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A86"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#planet_documetary"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:first rdf:nodeID="A30"/>
+    <rdf:rest rdf:nodeID="A83"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#telephone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#communication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Mercendes_antic">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <has_origin_from rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Αντίκα Mercendes</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A2"/>
+    <swrl:head rdf:nodeID="A87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:first rdf:nodeID="A42"/>
+    <rdf:rest rdf:nodeID="A84"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Small_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A46"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="A89"/>
+    <rdf:first rdf:nodeID="A85"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Painting_of_a_girl">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Paintings"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πινακας ενός κοριτσιου</exh_title>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery_1"/>
+    <is_associated_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Scarabeo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <owl:onProperty rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium_exhibition"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A77"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#East_side_gallery">
+    <no_visitors>100000</no_visitors>
+    <no_exhibits>30</no_exhibits>
+    <telephone>1314134</telephone>
+    <email>mailer@berlin.com</email>
+    <is_located_in>http://www.owl-ontologies.com/5399_ask4.owl#Berlin</is_located_in>
+    <address>berlin</address>
+    <org_name>east_side_gallery</org_name>
+    <rdf:type>http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Sun_and_the_sea_documentary">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#planet_documetary"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ο ήλιος και η θαλασσα</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A12"/>
+    <rdf:rest rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Picture_gallery"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition">
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#cadillac"/>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_exhibits>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2105456635</telephone>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Mercendes_antic"/>
+    <sub_org_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_national>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mailer@exhb.meuseum.gr</email>
+    <collaborate_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πολιτιστική εκδήλωση Αθήνας</org_name>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Scarabeo"/>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_visitors>
+    <owns rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Acropolis_painting"/>
+    <collaborate_with rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#no_exhibits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A88"/>
+    <swrl:head rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#London">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#British_Art_exhibition"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Great_Britain"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Λονδίνο</area_name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#has">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_located_in"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Dominikos_Paintings">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Paintings"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Πινακας του Δομινικου</exh_title>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Athens">
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_Picture_gallery"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Crete"/>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union"/>
+    <has rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Art_gallery"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Αθήνα</area_name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A21"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A81"/>
+    <rdf:rest rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibition"/>
+    <rdf:rest rdf:nodeID="A90"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Small_exhibition_1">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Small_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A94"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl/#Italy">
+    <rdf:type>http://www.owl-ontologies.com/5399_ask4.owl/#Country</rdf:type>
+    <j.0:area_name>italia</j.0:area_name>
+    <j.0:road_connected>http://www.owl-ontologies.com/5399_ask4.owl/#Athens</j.0:road_connected>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Greece_Exhibitional_Union">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <is_cultural_carrier_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Greece"/>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_visitors>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</no_exhibits>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ενωση Πολιτιστικών εκδηλώσεων</org_name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="A67"/>
+    <swrl:body rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Area"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="A50"/>
+    <rdf:first rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#includes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_region_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_Picture_gallery_of_Athens">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A62"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Grafity_painting">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Art_gallery"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Έκθεμα Grafity</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="A79"/>
+    <swrl:body rdf:nodeID="A93"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#belongs_to">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#owns"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#is_national">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_exhibition"/>
+    <rdf:rest rdf:nodeID="A96"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Guernica">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Paintings"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spain_picture_gallery"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Γκουέρνικα</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#v">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#is_associated_with">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#is_associated_with"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#National_Picture_gallery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A95"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="A92"/>
+    <swrl:body rdf:nodeID="A91"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#cadillac">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Athens_exhibition"/>
+    <has_origin_from rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Olympia"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Αντίκα Cadillac</exh_title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#City">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Country"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#British_Exhibition_union">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <is_cultural_carrier_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Great_Britain"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Βρετανικη ένωση πολιτιστικών εκδηλώσεων</org_name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exibition_objects"/>
+    <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Antic_car_1">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Antic_cars"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Αυτοκίνητο αντίκα</exh_title>
+    <has_origin_from rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Patras_exhibition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#British_Art_exhibition">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_national>
+    <is_located_in rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#London"/>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Βρετανικό πολιτιστική εκδήλωση Τέχνης</org_name>
+    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</no_visitors>
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">art_london@museum.uk</email>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">321653416</telephone>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Λονδίνου 2</address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:first rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Planetarium_exhibition"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Rule-6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A60"/>
+    <swrl:head rdf:nodeID="A82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#x">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#road_connected">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#road_connected"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#sub_org_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Cultural_organizations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Madrit">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#City"/>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Μαδρίτη</area_name>
+    <road_connected rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Barcelona"/>
+    <is_region_of rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Spain"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Big_exhibition"/>
+    <swrl:argument1 rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#area_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Area"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Various_exhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A72"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Exhibitions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/5399_ask4.owl#Furniture_exhibit">
+    <rdf:type rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#Art_exhibit"/>
+    <belongs_to rdf:resource="http://www.owl-ontologies.com/5399_ask4.owl#National_Art_gallery"/>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Συλλεκτικό έπιπλο</exh_title>
+  </rdf:Description>
+</rdf:RDF>

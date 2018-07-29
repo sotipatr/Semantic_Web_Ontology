@@ -1,0 +1,15 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uni: <http://www.mydomain.org/uni-ns/>
+
+SELECT ?professor ?phone
+WHERE {	?professor rdf:type uni:Professor.
+		?professor	uni:has_phone ?phone.
+		?professor	uni:has_age ?age.
+			FILTER (?age<"40")
+			  }
+			  
+	  
+			  
+			  
+			  

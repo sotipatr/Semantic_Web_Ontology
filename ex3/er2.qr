@@ -1,0 +1,13 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl/#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX org: <http://organisms.org#>
+
+SELECT ?species ?population
+WHERE {	?animal rdf:type org:animal. 
+			?animal org:isAntagonist ?wolf.
+			?wolf org:species "Λύκος".
+			?animal org:species ?species.
+			?animal org:population ?population
+			  }

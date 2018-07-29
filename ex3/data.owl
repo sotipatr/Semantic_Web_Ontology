@@ -1,0 +1,241 @@
+<rdf:RDF
+	xmlns:owl ="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
+	xmlns:org="http://organisms.org#">
+	
+	<owl:Class rdf:about = "http://organisms.org#organism">
+		<rdfs:label xml:lang = "gr">Οργανισμός</rdfs:label>
+		<owl:disjointWith rdf:resource="#region"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#plant">
+		<rdfs:label xml:lang = "gr">Φυτό</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#animal"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#organism"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#animal">
+		<rdfs:label xml:lang = "gr">Ζώο</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#plant"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#organism"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#herbivore">
+		<rdfs:label xml:lang = "gr">Φυτoφάγο</rdfs:label>
+		<rdf:subClassOf rdf:resource="http://organisms.org#animal">
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://organisms.org#eats"/>
+				<owl:allValuesFrom rdf:resource="http://organisms.org#plant"/>
+			</owl:Restriction>
+		</rdf:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#carnivore">
+		<rdfs:label xml:lang = "gr">Σαρκoφάγο</rdfs:label>
+		<owl:equivalentClass rdf:resource="http://organisms.org#animal"/>
+			<rdf:subClassOf>
+				<owl:Restriction>
+					<owl:onProperty rdf:resource="http://organisms.org#eats"/>
+					<owl:allValuesFrom rdf:resource="http://organisms.org#animal"/>
+				</owl:Restriction>
+			</rdf:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#american_predator">
+		<rdfs:label xml:lang = "gr">Αρπακτικά_Αμερικής</rdfs:label>
+		<owl:equivalentClass rdf:resource="http://organisms.org#carnivore"/>
+			<rdf:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://organisms.org#flies"/>
+				<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+			</owl:Restriction>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://organisms.org#livesIn"/>
+				<owl:hasValue rdf:resource="http://organisms.org#america"/>
+			</owl:Restriction>
+			</rdf:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#greek_animals">
+		<rdfs:label xml:lang = "gr">Ελληνικά_Ζώα</rdfs:label>
+		<owl:equivalentClass rdf:resource="http://organisms.org#animal"/>
+			<rdf:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://organisms.org#livesIn"/>
+				<owl:hasValue rdf:resource="http://organisms.org#Greece"/>
+			</owl:Restriction>
+			</rdf:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#region">
+		<rdfs:label xml:lang = "gr">Περιοχή</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#organism"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#europe">
+		<rdfs:label xml:lang = "gr">Ευρώπη</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#asia"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#africa"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#america"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#region"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#asia">
+		<rdfs:label xml:lang = "gr">Ασία</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#europe"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#africa"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#america"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#region"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about = "http://organisms.org#africa">
+		<rdfs:label xml:lang = "gr">Αφρική</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#asia"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#europe"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#america"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#region"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://organisms.org#america">
+		<rdfs:label xml:lang="gr">Αμερική</rdfs:label>
+		<owl:disjointWith rdf:resource="http://organisms.org#asia"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#africa"/>
+		<owl:disjointWith rdf:resource="http://organisms.org#europe"/>
+		<rdf:subClassOf rdf:resource="http://organisms.org#region"/>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="http://organisms.org#eats">
+		<rdfs:label xml:lang = "gr">τρώει</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://organisms.org#organism"/> 
+		<owl:inverseOf rdf:resource="http://organisms.org#isEatenBy"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://organisms.org#livesIn">
+		<rdfs:label xml:lang = "gr">ζει_σε</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://organisms.org#region"/> 
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://organisms.org#isAnsestor">
+		<rdfs:label xml:lang = "gr">είναι_πρόγονος</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://organisms.org#organism"/> 
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://organisms.org#isAntagonist">
+		<rdfs:label xml:lang = "gr">είναι_ανταγωνιστής</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://organisms.org#organism"/> 
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://organisms.org#isEatenBy">
+		<rdfs:label xml:lang = "gr">τρώγεται</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://organisms.org#organism"/> 
+		<owl:inverseOf rdf:resource="http://organisms.org#eats"/>
+	</owl:ObjectProperty>
+	
+	<owl:DataProperty rdf:about="http://organisms.org#belongsToGenus">
+		<rdfs:label xml:lang = "gr">ανήκει_στο_γένος</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	</owl:DataProperty>
+	
+	<owl:DataProperty rdf:about="http://organisms.org#species">
+		<rdfs:label xml:lang = "gr">είδος</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	</owl:DataProperty>
+	
+	<owl:DataProperty rdf:about="http://organisms.org#flies">
+		<rdfs:label xml:lang = "gr">πετάει</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+	</owl:DataProperty>
+	
+	<owl:DataProperty rdf:about="http://organisms.org#population">
+		<rdfs:label xml:lang = "gr">πληθυσμός</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#organism"/>
+		<rdf:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</owl:DataProperty>
+	
+	<owl:DataProperty rdf:about="http://organisms.org#name">
+		<rdfs:label xml:lang = "gr">όνομα</rdfs:label>
+		<rdf:domain rdf:resource="http://organisms.org#region"/>
+		<rdf:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DataProperty>
+	
+	<!-- Antikeimena -->
+	<org:region rdf:about="http://organisms.org#Greece">
+		<org:name>Ελλάδα</org:name>
+	</org:region>
+	
+	<org:carnivore rdf:about="http://organisms.org#Wolf">
+		<org:species>Κυνίδες</org:species>
+		<org:belongsToGenus>Θυλαστικό</org:belongsToGenus>
+		<org:isAntagonist rdf:resource="http://organisms.org#Τiger"/>
+		<org:isAntagonist rdf:resource="http://organisms.org#leopard"/>
+		<org:population>700</org:population>
+		<org:livesIn rdf:resource="http://organisms.org#Greece"/>
+	</org:carnivore>
+	
+	<org:carnivore rdf:about="http://organisms.org#leopard">
+		<org:species>Αιλουροειδές_γάτας</org:species>
+		<org:belongsToGenus>Θυλαστικό</org:belongsToGenus>
+		<org:population>1000</org:population>
+		<org:isAntagonist rdf:resource="http://organisms.org#Wolf"/>
+		<org:isAntagonist rdf:resource="http://organisms.org#Τiger"/>
+	</org:carnivore>
+	
+	<org:carnivore rdf:about="http://organisms.org#Tiger">
+		<org:species>Αιλουροειδές</org:species>
+		<org:belongsToGenus>Θυλαστικό</org:belongsToGenus>
+		<org:population>3000</org:population>
+		<org:isAntagonist rdf:resource="http://organisms.org#Wolf"/>
+	</org:carnivore>
+	
+	<org:carnivore rdf:about="http://organisms.org#Eagle">
+		<org:species>Αετομόρφο</org:species>
+		<org:belongsToGenus>Αρπακτικό</org:belongsToGenus>
+		<org:flies rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</org:flies>
+		<org:livesIn rdf:resource="http://organisms.org#Greece"/>
+	</org:carnivore>
+	
+	<org:herbivore rdf:about="http://organisms.org#Owl">
+		<org:species>Γλαυκόμορφο</org:species>
+		<org:belongsToGenus>Πτηνό</org:belongsToGenus>
+		<org:flies rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</org:flies>
+		<org:livesIn rdf:resource="http://organisms.org#Greece"/>
+		<org:population>2000</org:population>
+	</org:herbivore>
+	
+	<org:herbivore rdf:about="http://organisms.org#carreta_carreta">
+		<org:species>Χελωνίδα</org:species>
+		<org:belongsToGenus>Ερπετό</org:belongsToGenus>
+		<org:livesIn rdf:resource="http://organisms.org#Greece"/>
+		<org:population>2000</org:population>
+	</org:herbivore>
+	
+	<org:herbivore rdf:about="http://organisms.org#dinosaur">
+		<org:belongsToGenus>Ερπετό</org:belongsToGenus>
+		<org:isAnsestor rdf:resource="http://organisms.org#lizard"/>
+		<org:population>0</org:population>
+	</org:herbivore>
+	
+	<org:herbivore rdf:about="http://organisms.org#lizard">
+		<org:belongsToGenus>Ερπετό</org:belongsToGenus>
+		<org:isAnsestor rdf:resource="http://organisms.org#carreta_carreta"/>
+		<org:population>10000</org:population>
+	</org:herbivore>
+	
+	<org:greek_animals rdf:about="http://organisms.org#greek_lamp">
+		<org:species>Πρόβατο</org:species>
+	</org:greek_animals>
+	</rdf:RDF>

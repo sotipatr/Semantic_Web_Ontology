@@ -1,0 +1,1180 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.owl-ontologies.com/5399_ask4.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:assert="http://www.owl-ontologies.com/assert.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://www.owl-ontologies.com/5399_ask4.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Exhibit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Exibition_objects"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Paintings"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="National_exhibition">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="is_national"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Class rdf:ID="Exhibitions"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Exhibitions">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cultural_organizations"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Cultural_organizations">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Area"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Exibition_objects"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Art_exhibition">
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Art_exhibit"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="owns"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Antic_exhibition">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Antic_cars"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#owns"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Exibition_objects">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Area"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Cultural_organizations"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Picture_gallery">
+    <rdfs:subClassOf rdf:resource="#Cultural_organizations"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#owns"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Paintings"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="planet_documetary">
+    <rdfs:subClassOf rdf:resource="#Exhibit"/>
+  </owl:Class>
+  <owl:Class rdf:ID="National_Picture_gallery">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#is_national"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Class rdf:about="#Picture_gallery"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Country">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Region"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Area"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Athens_National_exhibition">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#National_exhibition"/>
+          <owl:Restriction>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#is_national"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="is_located_in"/>
+            </owl:onProperty>
+            <owl:hasValue>
+              <City rdf:ID="Athens">
+                <has>
+                  <Exhibitions rdf:ID="Athens_exhibition">
+                    <owns>
+                      <Antic_cars rdf:ID="cadillac">
+                        <belongs_to rdf:resource="#Athens_exhibition"/>
+                        <has_origin_from>
+                          <Region rdf:ID="Olympia">
+                            <has>
+                              <Picture_gallery rdf:ID="Picture_gallery_1">
+                                <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Ολυμπία</org_name>
+                                <owns>
+                                  <Paintings rdf:ID="Painting_of_a_girl">
+                                    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                    >Πινακας ενός κοριτσιου</exh_title>
+                                    <belongs_to rdf:resource="#Picture_gallery_1"/>
+                                    <is_associated_with>
+                                      <Antic_cars rdf:ID="Scarabeo">
+                                        <belongs_to rdf:resource="#Athens_exhibition"/>
+                                        <has_origin_from rdf:resource="#Olympia"/>
+                                        <exh_title rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Scarabeo</exh_title>
+                                        <is_associated_with rdf:resource="#Painting_of_a_girl"/>
+                                      </Antic_cars>
+                                    </is_associated_with>
+                                  </Paintings>
+                                </owns>
+                                <is_located_in rdf:resource="#Olympia"/>
+                                <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                >false</is_national>
+                                <sub_org_of>
+                                  <Cultural_organizations rdf:ID="Greece_Exhibitional_Union">
+                                    <is_cultural_carrier_of>
+                                      <Country rdf:ID="Greece">
+                                        <has_cultural_carrier rdf:resource="#Greece_Exhibitional_Union"/>
+                                        <has_capital rdf:resource="#Athens"/>
+                                        <area_name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Έλλαδα</area_name>
+                                        <includes>
+                                          <City rdf:ID="Patras">
+                                            <road_connected rdf:resource="#Athens"/>
+                                            <road_connected>
+                                              <City rdf:ID="Crete">
+                                                <road_connected rdf:resource="#Patras"/>
+                                                <road_connected rdf:resource="#Athens"/>
+                                                <road_connected rdf:resource="#Olympia"/>
+                                                <area_name rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Κρήτη</area_name>
+                                                <has>
+                                                  <Exhibitions rdf:ID="Antic_car_exhibition">
+                                                    <email rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >mailer@antqcars.gr</email>
+                                                    <address rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >Βενιζέλου 4</address>
+                                                    <org_name
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >Πολιτιστική εκδήλωση αυτοκινήτων αντικες</org_name>
+                                                    <is_national
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                                    >false</is_national>
+                                                    <no_visitors
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >50</no_visitors>
+                                                    <owns>
+                                                      <Various_exhibit rdf:ID="mini_cooper">
+                                                        <exh_title
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#string"
+                                                        >Μινι κουπερ</exh_title>
+                                                        <belongs_to rdf:resource="#Antic_car_exhibition"/>
+                                                      </Various_exhibit>
+                                                    </owns>
+                                                    <is_located_in rdf:resource="#Crete"/>
+                                                    <no_exhibits
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >4</no_exhibits>
+                                                  </Exhibitions>
+                                                </has>
+                                                <is_region_of rdf:resource="#Greece"/>
+                                              </City>
+                                            </road_connected>
+                                            <road_connected rdf:resource="#Olympia"/>
+                                            <is_region_of rdf:resource="#Greece"/>
+                                            <has>
+                                              <Exhibitions rdf:ID="Patras_exhibition">
+                                                <no_visitors rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >512</no_visitors>
+                                                <telephone rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >261325489</telephone>
+                                                <org_name rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Πολιτιστική εκδήλωση Πατρας</org_name>
+                                                <email rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >mailer@upatras.gr</email>
+                                                <owns>
+                                                  <Antic_cars rdf:ID="Achaican_antic_car">
+                                                    <belongs_to rdf:resource="#Patras_exhibition"/>
+                                                    <exh_title
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >Αχαικό αυτοκίνητο αντίκα</exh_title>
+                                                    <has_origin_from rdf:resource="#Patras"/>
+                                                  </Antic_cars>
+                                                </owns>
+                                                <sub_org_of rdf:resource="#Greece_Exhibitional_Union"/>
+                                                <collaborate_with rdf:resource="#Athens_exhibition"/>
+                                                <owns>
+                                                  <Antic_cars rdf:ID="Antic_car_1">
+                                                    <exh_title
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >Αυτοκίνητο αντίκα</exh_title>
+                                                    <has_origin_from rdf:resource="#Patras"/>
+                                                    <belongs_to rdf:resource="#Patras_exhibition"/>
+                                                  </Antic_cars>
+                                                </owns>
+                                                <address rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Univercity of Patras</address>
+                                                <is_national rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >false</is_national>
+                                                <no_exhibits rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >1000</no_exhibits>
+                                                <is_located_in rdf:resource="#Patras"/>
+                                              </Exhibitions>
+                                            </has>
+                                            <area_name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Πάτρα</area_name>
+                                          </City>
+                                        </includes>
+                                        <includes rdf:resource="#Olympia"/>
+                                        <includes rdf:resource="#Crete"/>
+                                      </Country>
+                                    </is_cultural_carrier_of>
+                                    <no_visitors rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#int"
+                                    >1000</no_visitors>
+                                    <no_exhibits rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#int"
+                                    >200</no_exhibits>
+                                    <is_located_in rdf:resource="#Athens"/>
+                                    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                    >Ενωση Πολιτιστικών εκδηλώσεων</org_name>
+                                  </Cultural_organizations>
+                                </sub_org_of>
+                              </Picture_gallery>
+                            </has>
+                            <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Ολυμπία</area_name>
+                            <road_connected rdf:resource="#Patras"/>
+                            <road_connected rdf:resource="#Athens"/>
+                            <road_connected rdf:resource="#Crete"/>
+                            <is_region_of rdf:resource="#Greece"/>
+                          </Region>
+                        </has_origin_from>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Αντίκα Cadillac</exh_title>
+                      </Antic_cars>
+                    </owns>
+                    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >1000</no_exhibits>
+                    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >2105456635</telephone>
+                    <owns>
+                      <Antic_cars rdf:ID="Mercendes_antic">
+                        <belongs_to rdf:resource="#Athens_exhibition"/>
+                        <has_origin_from rdf:resource="#Athens"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Αντίκα Mercendes</exh_title>
+                      </Antic_cars>
+                    </owns>
+                    <sub_org_of rdf:resource="#Greece_Exhibitional_Union"/>
+                    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</is_national>
+                    <is_located_in rdf:resource="#Athens"/>
+                    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mailer@exhb.meuseum.gr</email>
+                    <collaborate_with>
+                      <Picture_gallery rdf:ID="Athens_Picture_gallery">
+                        <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >10000</no_visitors>
+                        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >2103355567</telephone>
+                        <owns>
+                          <Paintings rdf:ID="Dominikos_Paintings">
+                            <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Πινακας του Δομινικου</exh_title>
+                            <belongs_to rdf:resource="#Athens_Picture_gallery"/>
+                          </Paintings>
+                        </owns>
+                        <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</is_national>
+                        <is_located_in rdf:resource="#Athens"/>
+                        <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Πινακοθήκη Αθηνών</org_name>
+                        <collaborate_with rdf:resource="#Athens_exhibition"/>
+                        <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >mailer@apg.gr</email>
+                        <sub_org_of rdf:resource="#Greece_Exhibitional_Union"/>
+                      </Picture_gallery>
+                    </collaborate_with>
+                    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Πολιτιστική εκδήλωση Αθήνας</org_name>
+                    <owns rdf:resource="#Scarabeo"/>
+                    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >1000</no_visitors>
+                    <owns>
+                      <Art_exhibit rdf:ID="Acropolis_painting">
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Η Ακρόπολη</exh_title>
+                        <belongs_to rdf:resource="#Athens_exhibition"/>
+                      </Art_exhibit>
+                    </owns>
+                    <collaborate_with rdf:resource="#Patras_exhibition"/>
+                  </Exhibitions>
+                </has>
+                <has rdf:resource="#Athens_Picture_gallery"/>
+                <road_connected rdf:resource="#Patras"/>
+                <road_connected rdf:resource="#Crete"/>
+                <road_connected rdf:resource="#Olympia"/>
+                <has>
+                  <Exhibitions rdf:ID="Planetarium">
+                    <sub_org_of rdf:resource="#Greece_Exhibitional_Union"/>
+                    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >1000</no_visitors>
+                    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >100</no_exhibits>
+                    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Πλανητάριο</org_name>
+                    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >mailer@planet.gr</email>
+                    <owns>
+                      <planet_documetary rdf:ID="Planet_systems_of_the_universe">
+                        <belongs_to rdf:resource="#Planetarium"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Planet_systems_of_the_universe</exh_title>
+                      </planet_documetary>
+                    </owns>
+                    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</is_national>
+                    <is_located_in rdf:resource="#Athens"/>
+                    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Ζωγράφου 3</address>
+                    <owns>
+                      <planet_documetary rdf:ID="Sun_and_the_sea_documentary">
+                        <belongs_to rdf:resource="#Planetarium"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Ο ήλιος και η θαλασσα</exh_title>
+                      </planet_documetary>
+                    </owns>
+                    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >2101236547</telephone>
+                  </Exhibitions>
+                </has>
+                <has rdf:resource="#Greece_Exhibitional_Union"/>
+                <has>
+                  <Exhibitions rdf:ID="National_Art_gallery">
+                    <owns>
+                      <Art_exhibit rdf:ID="Furniture_exhibit">
+                        <belongs_to rdf:resource="#National_Art_gallery"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Συλλεκτικό έπιπλο</exh_title>
+                      </Art_exhibit>
+                    </owns>
+                    <sub_org_of rdf:resource="#Greece_Exhibitional_Union"/>
+                    <is_located_in rdf:resource="#Athens"/>
+                    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >1000</no_exhibits>
+                    <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</is_national>
+                    <owns>
+                      <Art_exhibit rdf:ID="Jewel_exhibit">
+                        <belongs_to rdf:resource="#National_Art_gallery"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Συλλεκτικό κόσμημα</exh_title>
+                      </Art_exhibit>
+                    </owns>
+                    <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >3210</no_visitors>
+                    <owns>
+                      <Art_exhibit rdf:ID="Grafity_painting">
+                        <belongs_to rdf:resource="#National_Art_gallery"/>
+                        <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Έκθεμα Grafity</exh_title>
+                      </Art_exhibit>
+                    </owns>
+                    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >2107658412</telephone>
+                    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Eθνική γκαλερί τέχνης</org_name>
+                  </Exhibitions>
+                </has>
+                <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Αθήνα</area_name>
+              </City>
+            </owl:hasValue>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Various_exhibit">
+    <rdfs:subClassOf rdf:resource="#Exhibit"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#planet_documetary"/>
+              <owl:Class rdf:about="#Art_exhibit"/>
+              <owl:Class rdf:about="#Antic_cars"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#City">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Area"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Country"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Paintings">
+    <owl:disjointWith rdf:resource="#Exhibit"/>
+    <rdfs:subClassOf rdf:resource="#Exibition_objects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Planetarium_exhibition">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#planet_documetary"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#owns"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Area">
+    <owl:disjointWith rdf:resource="#Cultural_organizations"/>
+    <owl:disjointWith rdf:resource="#Exibition_objects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mixed_exhibition">
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Antic_exhibition"/>
+              <owl:Class rdf:about="#Art_exhibition"/>
+            </owl:intersectionOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Antic_exhibition"/>
+              <owl:Class rdf:about="#Planetarium_exhibition"/>
+            </owl:intersectionOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Art_exhibition"/>
+              <owl:Class rdf:about="#Planetarium_exhibition"/>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="National_Area">
+    <rdfs:subClassOf rdf:resource="#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Big_exhibition">
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#owns"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</owl:minCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Various_exhibition">
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Antic_exhibition"/>
+              <owl:Class rdf:about="#Art_exhibition"/>
+              <owl:Class rdf:about="#Planetarium_exhibition"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Art_exhibit">
+    <rdfs:subClassOf rdf:resource="#Exhibit"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Small_exhibition">
+    <rdfs:subClassOf rdf:resource="#Exhibitions"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#owns"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Antic_cars">
+    <rdfs:subClassOf rdf:resource="#Exhibit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Region">
+    <rdfs:subClassOf rdf:resource="#Area"/>
+    <owl:disjointWith rdf:resource="#City"/>
+    <owl:disjointWith rdf:resource="#Country"/>
+  </owl:Class>
+  <owl:Class rdf:ID="National_Picture_gallery_of_Athens">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#National_Picture_gallery"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#is_national"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</owl:hasValue>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#is_located_in"/>
+            </owl:onProperty>
+            <owl:hasValue rdf:resource="#Athens"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#is_located_in">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="has"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdfs:range rdf:resource="#Area"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#owns">
+    <rdfs:range rdf:resource="#Exibition_objects"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="belongs_to"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#belongs_to">
+    <owl:inverseOf rdf:resource="#owns"/>
+    <rdfs:range rdf:resource="#Cultural_organizations"/>
+    <rdfs:domain rdf:resource="#Exibition_objects"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes">
+    <rdfs:domain rdf:resource="#Country"/>
+    <rdfs:range rdf:resource="#Area"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="is_region_of"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#has">
+    <owl:inverseOf rdf:resource="#is_located_in"/>
+    <rdfs:domain rdf:resource="#Area"/>
+    <rdfs:range rdf:resource="#Cultural_organizations"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="no_exhibits">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="no_visitors">
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="communication">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="address">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="telephone">
+    <rdfs:subPropertyOf rdf:resource="#communication"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#is_national">
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="email">
+    <rdfs:subPropertyOf rdf:resource="#communication"/>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:ID="road_connected">
+    <owl:inverseOf rdf:resource="#road_connected"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Area"/>
+    <rdfs:range rdf:resource="#Area"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="sub_gallery">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="sub_org_of"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Picture_gallery"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Picture_gallery"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="sub_exhibition">
+    <rdfs:range rdf:resource="#Exhibitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#sub_org_of"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Exhibitions"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#sub_org_of">
+    <rdfs:range rdf:resource="#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:ID="collaborate_with">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdfs:range rdf:resource="#Cultural_organizations"/>
+    <owl:inverseOf rdf:resource="#collaborate_with"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="is_associated_with">
+    <rdfs:domain rdf:resource="#Exibition_objects"/>
+    <owl:inverseOf rdf:resource="#is_associated_with"/>
+    <rdfs:range rdf:resource="#Exibition_objects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:ID="is_cultural_carrier_of">
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#Country"/>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="has_cultural_carrier"/>
+    </owl:inverseOf>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="area_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Area"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="org_name">
+    <rdfs:domain rdf:resource="#Cultural_organizations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="has_origin_from">
+    <rdfs:range rdf:resource="#Area"/>
+    <rdfs:domain rdf:resource="#Exibition_objects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#is_region_of">
+    <owl:inverseOf rdf:resource="#includes"/>
+    <rdfs:domain rdf:resource="#Area"/>
+    <rdfs:range rdf:resource="#Country"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="exh_title">
+    <rdfs:domain rdf:resource="#Exibition_objects"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:ID="has_capital">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Country"/>
+    <rdfs:range rdf:resource="#City"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#has_cultural_carrier">
+    <rdfs:range rdf:resource="#Cultural_organizations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#is_cultural_carrier_of"/>
+    <rdfs:domain rdf:resource="#Country"/>
+  </owl:InverseFunctionalProperty>
+  <Art_exhibit rdf:ID="Painting_of_a_landscape">
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Πίνακας τοπίου</exh_title>
+  </Art_exhibit>
+  <National_Picture_gallery_of_Athens rdf:ID="National_Picture_gallery_of_Athens_Middle_Ages_Section">
+    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mailer@npga.gr</email>
+    <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >654163153</telephone>
+    <sub_org_of rdf:resource="#Athens_Picture_gallery"/>
+    <sub_gallery rdf:resource="#Athens_Picture_gallery"/>
+    <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Μιχαλακοπούλου 1, Αθήνα 115 28</address>
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Μεσσαιωνικό τμήμα Εθνικής Πινακοθήκης Αθηνών</org_name>
+    <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</no_exhibits>
+  </National_Picture_gallery_of_Athens>
+  <Art_exhibit rdf:ID="Bronze_Art_exhibit">
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Μπρούτζινο εκθεμα τέχνης</exh_title>
+  </Art_exhibit>
+  <swrl:Imp rdf:ID="Rule-1">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="x"/>
+                </swrl:argument2>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="a"/>
+                </swrl:argument1>
+                <swrl:propertyPredicate rdf:resource="#has"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:ClassAtom>
+                    <swrl:argument1 rdf:resource="#x"/>
+                    <swrl:classPredicate rdf:resource="#Cultural_organizations"/>
+                  </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1 rdf:resource="#x"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="#is_national"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Area"/>
+            <swrl:argument1 rdf:resource="#a"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#a"/>
+            <swrl:classPredicate rdf:resource="#National_Area"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-2">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Exhibitions"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="p"/>
+            </swrl:argument1>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#no_visitors"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="v"/>
+                </swrl:argument2>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:first rdf:resource="#v"/>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >900</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#National_exhibition"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <Small_exhibition rdf:ID="Small_exhibition_1"/>
+  <swrl:Imp rdf:ID="Rule-3">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Big_exhibition"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >10</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                        <rdf:first rdf:resource="#v"/>
+                      </rdf:List>
+                    </swrl:arguments>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#v"/>
+                <swrl:propertyPredicate rdf:resource="#no_exhibits"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Exhibitions"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-4">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Small_exhibition"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >3</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                        <rdf:first rdf:resource="#v"/>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:resource="#v"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#no_exhibits"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Exhibitions"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-5">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#is_national"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:resource="#v"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#no_visitors"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >100</rdf:first>
+                          </rdf:List>
+                        </rdf:rest>
+                        <rdf:first rdf:resource="#v"/>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Cultural_organizations"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-6">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Picture_gallery"/>
+            <swrl:argument1 rdf:resource="#x"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument1 rdf:resource="#x"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#no_exhibits"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <Cultural_organizations rdf:ID="Spanish_Exhibition_Union">
+    <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ενωση πολιτιστικών εκδηλώσεων Ισπανίας</org_name>
+    <is_cultural_carrier_of>
+      <Country rdf:ID="Spain">
+        <has_capital>
+          <City rdf:ID="Madrit">
+            <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Μαδρίτη</area_name>
+            <road_connected>
+              <Region rdf:ID="Barcelona">
+                <is_region_of rdf:resource="#Spain"/>
+                <road_connected rdf:resource="#Madrit"/>
+                <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Βαρκελώνη</area_name>
+              </Region>
+            </road_connected>
+            <is_region_of rdf:resource="#Spain"/>
+          </City>
+        </has_capital>
+        <includes rdf:resource="#Madrit"/>
+        <includes rdf:resource="#Barcelona"/>
+        <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Ισπανία</area_name>
+        <has_cultural_carrier rdf:resource="#Spanish_Exhibition_Union"/>
+      </Country>
+    </is_cultural_carrier_of>
+  </Cultural_organizations>
+  <City rdf:ID="London">
+    <has>
+      <Exhibitions rdf:ID="British_Art_exhibition">
+        <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</is_national>
+        <is_located_in rdf:resource="#London"/>
+        <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Βρετανικό πολιτιστική εκδήλωση Τέχνης</org_name>
+        <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1000</no_visitors>
+        <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >art_london@museum.uk</email>
+        <telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >321653416</telephone>
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Λονδίνου 2</address>
+      </Exhibitions>
+    </has>
+    <is_region_of>
+      <Country rdf:ID="Great_Britain">
+        <has_cultural_carrier>
+          <Cultural_organizations rdf:ID="British_Exhibition_union">
+            <is_cultural_carrier_of rdf:resource="#Great_Britain"/>
+            <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Βρετανικη ένωση πολιτιστικών εκδηλώσεων</org_name>
+          </Cultural_organizations>
+        </has_cultural_carrier>
+        <includes rdf:resource="#London"/>
+        <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Μεγάλη Βρετανεία</area_name>
+        <has_capital rdf:resource="#London"/>
+      </Country>
+    </is_region_of>
+    <area_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Λονδίνο</area_name>
+  </City>
+  <Paintings rdf:ID="Guernica">
+    <belongs_to>
+      <Picture_gallery rdf:ID="Spain_picture_gallery">
+        <sub_org_of rdf:resource="#Spanish_Exhibition_Union"/>
+        <owns rdf:resource="#Guernica"/>
+        <no_exhibits rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >90</no_exhibits>
+        <no_visitors rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1000</no_visitors>
+        <is_national rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</is_national>
+        <org_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Πινακοθηκη Ισπανίας</org_name>
+      </Picture_gallery>
+    </belongs_to>
+    <exh_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Γκουέρνικα</exh_title>
+  </Paintings>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
